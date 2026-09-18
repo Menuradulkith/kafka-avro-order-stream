@@ -1,0 +1,2 @@
+confluent-kafka[avro]==2.5.3
+requests==2.32.3

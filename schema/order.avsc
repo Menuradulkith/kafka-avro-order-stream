@@ -1,0 +1,10 @@
+{
+  "type": "record",
+  "name": "OrderEvent",
+  "namespace": "orderstream.events",
+  "fields": [
+    { "name": "orderId", "type": "string" },
+    { "name": "product", "type": "string" },
+    { "name": "price", "type": "float" }
+  ]
+}
