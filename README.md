@@ -88,12 +88,4 @@ registered schema, and both consumer groups.
 docker compose down
 ```
 
-## Notes / known limitations
 
-- The `PriceTracker` is in-memory per consumer process and resets on
-  restart — fine for a demo, would need a shared store (Redis, a
-  compacted Kafka topic, etc.) to survive restarts or scale across
-  multiple consumer instances.
-- The simulated downstream failure rate and invalid-order cadence are
-  both configurable via constants/CLI flags so retry and dead-letter
-  behavior can be reproduced on demand during a live demo.

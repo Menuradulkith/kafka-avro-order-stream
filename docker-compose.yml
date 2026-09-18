@@ -17,7 +17,7 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
-      CLUSTER_ID: OrderStreamCluster01
+      CLUSTER_ID: LOo12SGCScOj0Pj3WKVGUg
     healthcheck:
       test: ["CMD", "bash", "-c", "kafka-topics --bootstrap-server localhost:9092 --list"]
       interval: 10s
@@ -32,7 +32,7 @@ services:
       broker:
         condition: service_healthy
     ports:
-      - "8081:8081"
+      - "8091:8081"
     environment:
       SCHEMA_REGISTRY_HOST_NAME: registry
       SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: PLAINTEXT://broker:29092
@@ -64,7 +64,7 @@ services:
       - broker
       - registry
     ports:
-      - "8080:8080"
+      - "8090:8080"
     environment:
       KAFKA_CLUSTERS_0_NAME: order-stream
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: broker:29092

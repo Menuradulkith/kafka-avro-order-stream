@@ -2,7 +2,7 @@
 from pathlib import Path
 
 KAFKA_BROKER = "localhost:9092"
-REGISTRY_URL = "http://localhost:8081"
+REGISTRY_URL = "http://localhost:8091"
 
 ORDERS_TOPIC = "order-events"
 DEADLETTER_TOPIC = "order-events.deadletter"
